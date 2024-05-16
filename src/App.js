@@ -11,8 +11,8 @@ function App() {
   return (
     <Fragment>
       <Header />
-      {isAuth && <UserProfile />}
       {!isAuth && <Auth />}
+      {isAuth && <UserProfile />}
       <Counter />
     </Fragment>
   );
