@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-import { useSelector } from 'react-redux';
 import Counter from './components/Counter';
 import Header from './components/Header';
-import Auth from './components/Auth';
 import UserProfile from './components/UserProfile';
+import Auth from './components/Auth';
+import { useSelector } from 'react-redux';
 
-function App() {
-  const isAuth = useSelector((state) => state.auth.isAuthenticated);
+export default function App() {
+  const isAuth = useSelector((state) => state.auth.authenticated);
 
   return (
-    <Fragment>
+    <>
       <Header />
       {isAuth ? (
         <>
@@ -19,8 +18,6 @@ function App() {
       ) : (
         <Auth />
       )}
-    </Fragment>
+    </>
   );
 }
-
-export default App;
