@@ -4,6 +4,7 @@ import { authActions } from './../store/auth';
 
 function Auth() {
   const dispatch = useDispatch();
+  
   function handleLogin(event) {
     event.preventDefault();
     dispatch(authActions.login());

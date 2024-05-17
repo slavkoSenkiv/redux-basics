@@ -10,8 +10,14 @@ export default function App() {
   return (
     <>
       <Header />
-      {isAuth ? <UserProfile /> : <Auth />}
-      <Counter />
+      {isAuth ? (
+        <>
+          <UserProfile />
+          <Counter />
+        </>
+      ) : (
+        <Auth />
+      )}
     </>
   );
 }
